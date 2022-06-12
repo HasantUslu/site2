@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Portfolyo</title>
+        <link rel="stylesheet" href="bootstrap.css">
+        <style>
+            li{
+                list-style:none ;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .dropbtn {
+                background-color: gray;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 600px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown:hover .dropdown-content {display: block;}
+
+            .dropdown:hover .dropbtn {
+                background-color: rgb(83, 83, 83);
+            }
+            a:link {
+                color:white;
+                text-decoration: none;
+            }
+            a:visited{
+                color: white;
+                text-decoration: none;
+            }
+            #maintext{
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 18px;
+            }
+            body{
+                min-height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            footer{
+                padding: 3rem;
+            }
+            html{
+                height: 100%;
+            }
+            th{
+                text-align: center;
+            }
+            th, td {
+                border: 1px solid black;
+                width: 25%;
+                text-align: center;
+            }
+            tr{
+                height: 50px;
+            }
+            table{
+                width: 100%;
+                margin-left: -15px;
+                margin-bottom: -15px ;
+            }
+        </style>
+    </head>
+    <body style="background-color:gainsboro">
+        <nav class="top-bar fixer">
+            <div class="container">
+                <div class="row bg-dark p-4 mt-3" style="border-radius: 10px;">
+                    <div id="maintext" class="col-md-3 text-white">
+                        <a href="index.html">Hasan Talha Uslu</a>
+                    </div>
+                    <div class="col-md-2 text-center text-white">
+                        <a href="index.html">Anasayfa</a>
+                    </div>
+                    <div class="col-md-2 text-center text-white">
+                        <a href="portfolyo.html">Portfolyo</a>
+                    </div>
+                    <div class="col-md-2 text-center text-white">
+                        <a href="iletisim.html">İletişim</a>
+                    </div>
+                    <div class="col-md-2 text-center text-white">
+                        <a href="hakkimda.html">Hakkımda</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <div class="row col-md-12 m-5">
+                <div class="dropdown ">
+                    <button class="dropbtn col-md-3">Projeler</button>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>
+                                <table>
+                                    <tr>
+                                        <th>Proje İsmi</th>
+                                        <th>Proje Bütçesi <br>(Bin TL)</th>
+                                        <th>Proje Süresi (Yıl)</th>
+                                        <th>Projede Çalışan Kişi Sayısı</th>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li>
+                                <table>
+                                    <tr>
+                                        <td id="projeismi1"></td>
+                                        <td id="projebutce1"></td>
+                                        <td id="projesure1"></td>
+                                        <td id="projeksayisi1"></td>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li>
+                                <table>
+                                    <tr>
+                                        <td id="projeismi2"></td>
+                                        <td id="projebutce2"></td>
+                                        <td id="projesure2"></td>
+                                        <td id="projeksayisi2"></td>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li>
+                                <table>
+                                    <tr>
+                                        <td id="projeismi3"></td>
+                                        <td id="projebutce3"></td>
+                                        <td id="projesure3"></td>
+                                        <td id="projeksayisi3"></td>
+                                    </tr>
+                                </table>    
+                            </li>
+                            <li>
+                                <table>
+                                <tr>
+                                    <td id="projeismi4"></td>
+                                    <td id="projebutce4"></td>
+                                    <td id="projesure4"></td>
+                                    <td id="projeksayisi4"></td>
+                                </tr>
+                            </table>
+                            </li>
+                            <li>
+                                <table>
+                                <tr>
+                                    <td id="projeismi5"></td>
+                                    <td id="projebutce5"></td>
+                                    <td id="projesure5"></td>
+                                    <td id="projeksayisi5"></td>
+                                </tr>
+                            </table>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            
+            const txt1 = '{"ismi":"Proje1", "butce":"300", "sure":3,  "ksayisi":"14"}'
+            const obj1 = JSON.parse(txt1);
+            const txt2 = '{"ismi":"Proje2", "butce":"250", "sure":2,  "ksayisi":"7"}'
+            const obj2 = JSON.parse(txt2);
+            const txt3 = '{"ismi":"Proje3", "butce":"450", "sure":5,  "ksayisi":"34"}'
+            const obj3 = JSON.parse(txt3);
+            const txt4 = '{"ismi":"Proje4", "butce":"560", "sure":6,  "ksayisi":"22"}'
+            const obj4 = JSON.parse(txt4);
+            const txt5 = '{"ismi":"Proje5", "butce":"810", "sure":8,  "ksayisi":"78"}'
+            const obj5 = JSON.parse(txt5);
+            document.getElementById("projeismi1").innerHTML = obj1.ismi;
+            document.getElementById("projesure1").innerHTML = obj1.sure;
+            document.getElementById("projebutce1").innerHTML = obj1.butce;
+            document.getElementById("projeksayisi1").innerHTML = obj1.ksayisi;
+            document.getElementById("projeismi2").innerHTML = obj2.ismi;
+            document.getElementById("projesure2").innerHTML = obj2.sure;
+            document.getElementById("projebutce2").innerHTML = obj2.butce;
+            document.getElementById("projeksayisi2").innerHTML = obj2.ksayisi;
+            document.getElementById("projeismi3").innerHTML = obj3.ismi;
+            document.getElementById("projesure3").innerHTML = obj3.sure;
+            document.getElementById("projebutce3").innerHTML = obj3.butce;
+            document.getElementById("projeksayisi3").innerHTML = obj3.ksayisi;
+            document.getElementById("projeismi4").innerHTML = obj4.ismi;
+            document.getElementById("projesure4").innerHTML = obj4.sure;
+            document.getElementById("projebutce4").innerHTML = obj4.butce;
+            document.getElementById("projeksayisi4").innerHTML = obj4.ksayisi;
+            document.getElementById("projeismi5").innerHTML = obj5.ismi;
+            document.getElementById("projesure5").innerHTML = obj5.sure;
+            document.getElementById("projebutce5").innerHTML = obj5.butce;
+            document.getElementById("projeksayisi5").innerHTML = obj5.ksayisi;
+
+        </script>
+
+        <script src="bootstrap.js">
+
+        </script>
+    </body>
+</html>

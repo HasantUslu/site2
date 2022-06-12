@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>İletişim</title>
+        <link rel="stylesheet" href="bootstrap.css">
+        <style>
+            a:link {
+                color:white;
+                text-decoration: none;
+            }
+            a:visited{
+                color: white;
+                text-decoration: none;
+            }
+            #maintext{
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 18px;
+            }
+            img{
+                width: 50px;
+                height: 50px;
+            }
+            body{
+                min-height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            footer{
+                padding: 3rem;
+            }
+            html{
+                height: 100%;
+            }
+        </style>
+        <script>
+            function button(){
+                alert("Kayıt Başarılı");
+            }
+        </script>
+    </head>
+    <body style="background-color:gainsboro">
+        <nav class="top-bar fixer">
+            <div class="container">
+                <div class="row bg-dark p-4 mt-3" style="border-radius: 10px;">
+                    <div id="maintext" class="col-md-3 text-white">
+                        <a href="index.html">Hasan Talha Uslu</a>
+                    </div>
+                    <div class="col-md-2 text-center text-white">
+                        <a href="index.html">Anasayfa</a>
+                    </div>
+                    <div class="col-md-2 text-center text-white">
+                        <a href="portfolyo.html">Portfolyo</a>
+                    </div>
+                    <div class="col-md-2 text-center text-white">
+                        <a href="iletisim.html">İletişim</a>
+                    </div>
+                    <div class="col-md-2 text-center text-white">
+                        <a href="hakkimda.html">Hakkımda</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row p-5">
+                <div class="row col-md-12 mb-3">
+                    <h3>İletişim</h3>
+                    <br>
+                </div>
+                <div class="row col-md-6">
+                    <div class="form">
+                        <label>E-posta Adresi</label>
+                        <input type="email" style="width: 100% ;" placeholder="E-posta">
+                        <button style="margin-top: 20px;"onclick="button()">Gönder</button>
+                    </div>
+                </div>
+                <div class="row col-md-6">
+                    <label>İleti</label>
+                    <br>
+                    <textarea rows="3" placeholder="Açıklama"></textarea>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="container p-5">
+            <div class="row pb-5">
+                <h3>Ulaşabileceğiniz Hesaplar</h3>
+            </div>
+            <div class="row">
+                <div class="row mb-3">
+                    <div class="col-md-1">
+                        <a href="https://www.instagram.com">
+                            <img src="images/instagram.png" alt="instagram">
+                        </a>
+                    </div>
+                    <div class="col-md-5">
+                        <a style="color:black" href="https://www.instagram.com">
+                        Instagram
+                        <br>
+                        hsn.usl
+                        </a>
+                    </div>
+
+                    <div class="col-md-1">
+                        <a href="https://www.google.com/intl/tr/gmail/about">
+                            <img style="height: 40px; "src="images/gmail.png" alt="gmail">
+                        </a>
+                    </div>
+                    <div class="col-md-5">
+                        <a style="color:black" href="https://www.google.com/intl/tr/gmail/about">
+                            Gmail
+                            <br>
+                            hasantuslu@gmail.com
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <div class="row mb-3">
+                    <div class="col-md-1">
+                        <a href="https://www.linkedin.com/home">
+                            <img src="images/linkedin.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                    <div class="col-md-5">
+                        <a style="color:black" href="https://www.linkedin.com/home">
+                            LinkedIn
+                            <br>
+                            Hasan Talha Uslu
+                        </a>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="https://github.com/">
+                            <img src="images/github.png" alt="Github">
+                        </a>
+                    </div>
+                    <div class="col-md-5">
+                        <a style="color:black" href="https://github.com/">
+                            Github
+                            <br>
+                            HasantUslu
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container-fluid">
+                <div class="row bg-dark p-2 mb-1 pt-6">
+                    <div class="col-md-3 text-center text-white">
+                        <a href="index.html">Anasayfa</a>
+                    </div>
+                    <div class="col-md-3 text-center text-white">
+                        <a href="portfolyo.html">Portfolyo</a>
+                    </div>
+                    <div class="col-md-3 text-center text-white">
+                        <a href="iletisim.html">İletişim</a>
+                    </div>
+                    <div class="col-md-3 text-center text-white">
+                        <a href="hakkimda.html">Hakkımda</a>
+                    </div>
+                    <div class="col-md-12 text-center text-white">
+                        <hr>
+                        <h5>Software Developer</h5>
+                        <h6>Hasan Talha Uslu</h6>
+                        <h6 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;">2022</h6>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="bootstrap.js">
+
+        </script>
+    </body>
+</html>
